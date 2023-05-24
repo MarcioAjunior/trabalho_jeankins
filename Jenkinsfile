@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Start') {
             steps {
-                sh 'cd pen npm run dev'
+                sh 'npm run dev'
             }
         }
     }
