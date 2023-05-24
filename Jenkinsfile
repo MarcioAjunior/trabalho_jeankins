@@ -8,8 +8,14 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'npm run build' 
+                sh 'npm install' 
             }
         }
+        stage('Deploy') { 
+            steps {
+                sh 'npm run dev'
+            }
+        }
+    }
     }
 }
