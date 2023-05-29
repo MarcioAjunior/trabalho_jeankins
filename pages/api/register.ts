@@ -33,7 +33,7 @@ export default async function handler(
     res.status(201).json(user);
   } catch (error) {
     // @ts-ignore
-    res.status(422).json({ message: "Usuario já cadastrado" });
+    res.status(422).json({ message: error });
   } finally {
     await prisma.$disconnect();
   }
